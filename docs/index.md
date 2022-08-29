@@ -101,3 +101,18 @@ function getAdder(int $x): int
 }
 ```
 
+### sql
+
+```sql
+
+select medalno,
+sum(case medallevel when 1 then 1 else 0 end ) level1,
+sum(case medallevel when 2 then 1 else 0 end ) level2,
+sum(case medallevel when 3 then 1 else 0 end ) level3,
+sum(case medallevel when 4 then 1 else 0 end ) level4,
+sum(case medallevel when 5 then 1 else 0 end ) level5,
+sum(case medallevel when 6 then 1 else 0 end ) level6,
+sum(case medallevel when 7 then 1 else 0 end ) level7
+ from membermedal GROUP BY medalno;
+```
+
